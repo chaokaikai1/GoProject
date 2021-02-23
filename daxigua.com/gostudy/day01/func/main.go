@@ -23,5 +23,5 @@ func fmtNameDes(name string, age int) string {
 func add(a *int, b *int) int {
 	*a = 3
 	*b = 4
-	return *a + *b
+	return *a * *b
 }
