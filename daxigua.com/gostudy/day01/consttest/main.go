@@ -14,4 +14,15 @@ func main() {
 		Women = 1
 	)
 	fmt.Println(Man)
+
+	//iota  特殊常量 可以被编辑器修改的常量
+
+	const (
+		a = iota
+		b = iota
+		c = iota
+	)
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(c)
 }
