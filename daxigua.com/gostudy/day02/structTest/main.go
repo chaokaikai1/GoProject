@@ -16,8 +16,12 @@ func main() {
 	book1.author = "aa"
 	book1.title = "我是标题"
 	//声明结构指针
+	var ptrBook2 *BookInfo
+	ptrBook2 = &book1
 	ptrBook := &book1
 	fmt.Println(ptrBook)
+	fmt.Println(ptrBook2)
+
 	fmt.Println(book1.title)
 	fmt.Println(bookinfo)
 	printBook(bookinfo)
