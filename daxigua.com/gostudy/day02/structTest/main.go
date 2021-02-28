@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type BookInfo struct {
 	title  string
@@ -25,4 +27,5 @@ func main() {
 
 func printBook(book BookInfo) {
 	fmt.Println(book.author)
+
 }

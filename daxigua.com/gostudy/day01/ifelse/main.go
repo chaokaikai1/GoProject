@@ -40,4 +40,14 @@ func main() {
 	fmt.Println(result)
 	fmt.Println(isMan)
 	fmt.Println(str)
+
+	//ifelse 的特殊写法
+	//作用域  变量作用域可以减少内存占用
+	if age := 19; age > 18 {
+		fmt.Println("aaa")
+	} else {
+		fmt.Println("bbb")
+	}
+	//fmt.Println(age)
+
 }
