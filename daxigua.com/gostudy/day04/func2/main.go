@@ -17,7 +17,7 @@ func f2(x, y int) (ret func(name string) string) {
 		return name
 	}
 	fmt.Println(age)
-	fmt.Println(ret)
+	//fmt.Println(ret)
 	return
 }
 func main() {
