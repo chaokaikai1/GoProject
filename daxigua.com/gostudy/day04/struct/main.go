@@ -18,23 +18,21 @@ func main() {
 	fmt.Println(p)
 
 	//结构体初始化方式2  key value
-	 
-	var p2=person{
-		name:"gg",
-		age:22,
-		hobby:[]string{"aa","bb"},
+
+	var p2 = person{
+		name:  "gg",
+		age:   22,
+		hobby: []string{"aa", "bb"},
 	}
 	//短变量声明
-	p3:=person{
-		name:"aa",
-		age:33,
+	p3 := person{
+		name: "aa",
+		age:  33,
 	}
 	//直接写值 按照字段顺序写
-	p4:=person{
-		"aa",
-		22,
-	}
+
 	fmt.Println(p2)
+	fmt.Println(p3)
 
 	//匿名结构体
 	var ss struct {
