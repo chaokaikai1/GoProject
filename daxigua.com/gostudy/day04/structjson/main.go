@@ -14,6 +14,11 @@ type person struct {
 	Age  int    `json:"age"`
 }
 
+type student struct {
+	Name string
+	Age  int
+}
+
 func main() {
 	p1 := person{
 		Name: "aa",
@@ -23,10 +28,22 @@ func main() {
 	fmt.Println(string(data))
 	fmt.Printf("%#v \n", string(data)) //%#v %v相应值默认格式   %#v 相应值 go语言中的格式
 
-	s1 := `{"myname":"bb","Age":22}` //反斜线原样输出
+	s1 := `{"Name":"bb","Age":22}` //反斜线原样输出
 
 	var p2 person
 	json.Unmarshal([]byte(s1), &p2)
 	fmt.Printf("%#v", p2)
+
+	st1 := student{
+		Name: "啦啦啦",
+		Age:  22,
+	}
+	data2, _ := json.Marshal(st1)
+	fmt.Println(string(data2))
+
+	str1 := `{"Name":"哈哈哈哈哈","Age":33}`
+	st2 := student{}
+	json.Unmarshal([]byte(str1), &st2)
+	fmt.Printf("st2 %v", st2)
 
 }
