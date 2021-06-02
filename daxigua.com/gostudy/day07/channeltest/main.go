@@ -42,8 +42,8 @@ func main() {
 	//从c chnanel中取的值 10
 	//将10 放到c channel 中
 	//main is over
-	//noBufChan()
+	noBufChan()
 
-	bufChan()
+	//bufChan()
 
 }
