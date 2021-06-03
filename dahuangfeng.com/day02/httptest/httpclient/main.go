@@ -1,6 +1,8 @@
 package main
 
 import (
+	"GoProject/dahuangfeng.com/Models"
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -8,7 +10,7 @@ import (
 	"strings"
 )
 
-func getFun() {
+func getFun() string {
 	url := "http://daduhui.mangotechdemo.com.au/webapi/Address/GetModelById/2"
 	resp, err := http.Get(url)
 	defer resp.Body.Close()
@@ -20,7 +22,8 @@ func getFun() {
 		panic(err)
 	}
 	result := string(data)
-	fmt.Println(result)
+	//fmt.Println(result)
+	return result
 }
 
 func postFun() {
@@ -77,6 +80,12 @@ func main() {
 	//postFun()
 	//postFun2()
 	//httpDoFun1()
-	httpDoFun2()
+	//httpDoFun2()
+	result:= getFun()
+	fmt.Println(result)
+	modelResult:= Models.ModelResult{}
+	json.Unmarshal([]byte(result),&modelResult)
+	fmt.Printf("result:%#v",modelResult)
+
 
 }

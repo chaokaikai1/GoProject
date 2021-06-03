@@ -5,7 +5,7 @@ type Address struct {
 	UserId        int
 	ReceiveName   string
 	PhoneType     int
-	Phone         string
+	phone         string `json:Phone`
 	DetailAddress string
 	Suburb        string
 	State         string
