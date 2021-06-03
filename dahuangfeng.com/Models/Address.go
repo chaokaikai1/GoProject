@@ -1,7 +1,5 @@
 package Models
 
-import "time"
-
 type Address struct {
 	Id            int
 	UserId        int
@@ -14,7 +12,7 @@ type Address struct {
 	Country       string
 	PostCode      string
 	IsDefault     int
-	AddTime       time.Time
-	UpdateTime    time.Time
+	AddTime       string
+	UpdateTime    string
 	Type          int
 }
